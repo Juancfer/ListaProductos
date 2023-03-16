@@ -1,4 +1,5 @@
 import React from "react";
+import './ProductDetail.css'
 import { useParams } from 'react-router-dom';
 import { products } from "../../ProductList";
 import { Link } from "react-router-dom";
@@ -11,7 +12,7 @@ const ProductDetail = (props) => {
     const handleOnCLick = () => props.userProfile({ user: authInfo.user, favProduct: products[id].name })
     
     return(
-        <div>
+        <div className="productDetail">
             <img src={products[id].image}></img>
             <p>{products[id].name}</p>
             <p>{products[id].price}</p>
